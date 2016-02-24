@@ -1,0 +1,49 @@
+classroom=['Иван Петров','Петр Иванов','Сергей Сидоров','Сидор Сергеев',
+'Федор Николаев','Николай Федоров','Юрий Андреев',
+'Андрей Юрьев','Алексей Павлов','Павел Алексеев','Иван Иванов',
+'Петр Петров','Сергей Сергеев','Сидор Сидоров','Федор Федоров',
+'Николай Николаев','Юрий Юрьев','Андрей Андреев','Алексей Алексеев',
+'Павел Павлов']
+#print(classroom)
+#numberstud=int(input())
+#print(classroom[numberstud])
+
+#c=int(input())
+#d=int(input())
+#print(classroom[c:d])
+#
+#count=0
+#for i in classroom:
+# if 'р' in i:
+#  count+=1
+#print (count)
+
+s=[]
+for j in classroom:
+ j=j.split()
+ s.append(j)
+s1=[]
+s2=[]
+s3=[]
+fordel=0
+x=0
+y=0
+for m in s:
+        s1=[]
+        for n in range (len(s)):
+                if m[0]==s[n][0]:
+                        if m not in s2:
+                                s1.append(m)
+                                s2.append(m)
+                        if s[n] not in s2:
+                                s1.append(s[n])
+                                s2.append(s[n])
+                                fordel+=1
+        s3.append(s1)
+count=0
+while count<fordel:
+        s3.remove([])
+        count+=1
+     
+for unit in s3:
+        print(unit)
